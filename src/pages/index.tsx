@@ -1,11 +1,14 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
+import Menu from "@/components/Menu";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [shouldShowIntro, setShouldShowIntro] = useState(true);
+  const [menuActive, setMenuActive] = useState(false);
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,15 +26,15 @@ export default function Home() {
         <Intro />
       ) : (
         <>
-          {/* HEADER */}
-          <Header />
-          {/* SLIDESHOWS */}
-          <Hero />
-          {/* MENU CONTENT */}
-
+          <Header menuActive={menuActive} setMenuActive={setMenuActive}/>
+          {menuActive ? <Menu /> : <Hero />}
+          
           {/* ABOUT */}
           {/* PROJECTS */}
           {/* CONTACTS */}
+          
+          
+          
         </>
       )}
     </div>

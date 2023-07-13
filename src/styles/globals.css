@@ -4,9 +4,21 @@
 
 @layer components {
   .line {
-    @apply w-full h-[2px] bg-white;
+    @apply w-full h-[2px] bg-white transition transform duration-500;
+  }
+  .first-line-active {
+    @apply rotate-45 translate-y-[9px] bg-black;
+  }
+  .second-line-active {
+    @apply hidden;
+  }
+  .third-line-active {
+    @apply -rotate-45 -translate-y-[9px] bg-black;
   }
   .arrow {
     @apply hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%]  text-3xl text-white cursor-pointer duration-500;
+  }
+  .menu {
+    @apply text-2xl tracking-wider my-1 text-center cursor-pointer hover:text-3xl;
   }
 }
