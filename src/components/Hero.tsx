@@ -41,9 +41,7 @@ function Hero({}: Props) {
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-full bg-center bg-cover duration-500"
-      >
-
-      </div>
+      ></div>
       <div className="arrow left-5">
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
       </div>

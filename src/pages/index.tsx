@@ -3,12 +3,13 @@ import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
 import Menu from "@/components/Menu";
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import AppContext from "@/context/AppContext";
 
 export default function Home() {
+  const context = useContext(AppContext);
   const [shouldShowIntro, setShouldShowIntro] = useState(true);
   const [menuActive, setMenuActive] = useState(false);
-
 
   useEffect(() => {
     setTimeout(() => {
@@ -26,15 +27,12 @@ export default function Home() {
         <Intro />
       ) : (
         <>
-          <Header menuActive={menuActive} setMenuActive={setMenuActive}/>
+          <Header menuActive={menuActive} setMenuActive={setMenuActive} />
           {menuActive ? <Menu /> : <Hero />}
-          
+
           {/* ABOUT */}
           {/* PROJECTS */}
           {/* CONTACTS */}
-          
-          
-          
         </>
       )}
     </div>

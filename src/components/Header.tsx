@@ -1,12 +1,11 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
 
 type Props = {
-    menuActive: boolean,
-    setMenuActive: Dispatch<SetStateAction<boolean>>
+  menuActive: boolean;
+  setMenuActive: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function Header({menuActive, setMenuActive}: Props) {
-
+export default function Header({ menuActive, setMenuActive }: Props) {
   return (
     <header
       className={
@@ -14,7 +13,13 @@ export default function Header({menuActive, setMenuActive}: Props) {
       }
     >
       <div>
-        <h1 className={"font-sans text-2xl tracking-widest text-" + (menuActive ? "black" : "white")}>
+        <h1
+          className={
+            "font-sans text-2xl tracking-widest cursor-pointer text-" +
+            (menuActive ? "black" : "white")
+          }
+          onClick={() => setMenuActive(false)}
+        >
           LPA
         </h1>
       </div>
@@ -25,18 +30,10 @@ export default function Header({menuActive, setMenuActive}: Props) {
         }
         onClick={() => setMenuActive(!menuActive)}
       >
-        <span
-          className={"line " + (menuActive && "first-line-active")}
-        ></span>
-        <span
-          className={"line " + (menuActive && "second-line-active")}
-        ></span>
-        <span
-          className={"line " + (menuActive && "third-line-active")}
-        ></span>
+        <span className={"line " + (menuActive && "first-line-active")}></span>
+        <span className={"line " + (menuActive && "second-line-active")}></span>
+        <span className={"line " + (menuActive && "third-line-active")}></span>
       </div>
     </header>
   );
 }
-
-/* {isAbsolute? 'absolute' : 'sticky' + "w-full top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center"} */
