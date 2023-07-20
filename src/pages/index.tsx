@@ -7,16 +7,16 @@ import { useContext, useEffect, useState } from "react";
 import AppContext from "@/context/AppContext";
 
 export default function Home() {
-  const context = useContext(AppContext);
+  const { menuActive, navigation } = useContext(AppContext);
   const [shouldShowIntro, setShouldShowIntro] = useState(true);
-  const [menuActive, setMenuActive] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setShouldShowIntro(false);
-    }, 2000);
+    }, 10);
   }, []);
 
+  const displayHero = !navigation ? <Hero /> : null;
   return (
     <div>
       <Head>
@@ -27,12 +27,8 @@ export default function Home() {
         <Intro />
       ) : (
         <>
-          <Header menuActive={menuActive} setMenuActive={setMenuActive} />
-          {menuActive ? <Menu /> : <Hero />}
-
-          {/* ABOUT */}
-          {/* PROJECTS */}
-          {/* CONTACTS */}
+          <Header />
+          {menuActive ? <Menu /> : displayHero}
         </>
       )}
     </div>

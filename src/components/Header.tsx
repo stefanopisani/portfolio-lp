@@ -1,11 +1,9 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
+import AppContext from "@/context/AppContext";
+import React, { useContext } from "react";
 
-type Props = {
-  menuActive: boolean;
-  setMenuActive: Dispatch<SetStateAction<boolean>>;
-};
-
-export default function Header({ menuActive, setMenuActive }: Props) {
+export default function Header() {
+  const { menuActive, setMenuActive, navigation } = useContext(AppContext);
+  const headerColor = navigation ? "black" : "white";
   return (
     <header
       className={
@@ -16,7 +14,7 @@ export default function Header({ menuActive, setMenuActive }: Props) {
         <h1
           className={
             "font-sans text-2xl tracking-widest cursor-pointer text-" +
-            (menuActive ? "black" : "white")
+            (menuActive ? "black" : headerColor)
           }
           onClick={() => setMenuActive(false)}
         >
@@ -30,9 +28,27 @@ export default function Header({ menuActive, setMenuActive }: Props) {
         }
         onClick={() => setMenuActive(!menuActive)}
       >
-        <span className={"line " + (menuActive && "first-line-active")}></span>
-        <span className={"line " + (menuActive && "second-line-active")}></span>
-        <span className={"line " + (menuActive && "third-line-active")}></span>
+        <span
+          className={
+            "line " +
+            (menuActive && "first-line-active ") +
+            (navigation && " line-navigation")
+          }
+        ></span>
+        <span
+          className={
+            "line " +
+            (menuActive && "second-line-active ") +
+            (navigation && " line-navigation")
+          }
+        ></span>
+        <span
+          className={
+            "line " +
+            (menuActive && "third-line-active ") +
+            (navigation && " line-navigation")
+          }
+        ></span>
       </div>
     </header>
   );

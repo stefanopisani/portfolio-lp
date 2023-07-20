@@ -3,17 +3,21 @@ import React, { useEffect, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
 type Props = {};
+type slide = {
+  url: string;
+  id: number;
+};
 
+export const slides: slide[] = [
+  { url: "/sito1.png", id: 1 },
+  { url: "/Esterna.jpg", id: 2 },
+  { url: "/sito2.png", id: 3 },
+  // { url: "/sito3.JPG" },
+  { url: "/Notturna.jpg", id: 4 },
+  // { url: "/Ballatoio.jpg" },
+  // { url: "/ED-HQ_MI_RENDER-INTERNO_3.png" },
+];
 function Hero({}: Props) {
-  const slides = [
-    { url: "/sito1.png" },
-    { url: "/Esterna.jpg" },
-    { url: "/sito2.png" },
-    // { url: "/sito3.JPG" },
-    { url: "/Notturna.jpg" },
-    // { url: "/Ballatoio.jpg" },
-    // { url: "/ED-HQ_MI_RENDER-INTERNO_3.png" },
-  ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
