@@ -1,19 +1,20 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
 type Props = {};
 type slide = {
   url: string;
   id: number;
+  title: string;
 };
 
 export const slides: slide[] = [
-  { url: "/sito1.png", id: 1 },
-  { url: "/Esterna.jpg", id: 2 },
-  { url: "/sito2.png", id: 3 },
+  { url: "/sito1.png", id: 1, title: "Palazzo Uno" },
+  { url: "/Esterna.jpg", id: 2, title: "Villa Ipsilon" },
+  { url: "/sito2.png", id: 3, title: "Casa Beta" },
   // { url: "/sito3.JPG" },
-  { url: "/Notturna.jpg", id: 4 },
+  { url: "/Notturna.jpg", id: 4, title: "Edificio Notte" },
   // { url: "/Ballatoio.jpg" },
   // { url: "/ED-HQ_MI_RENDER-INTERNO_3.png" },
 ];

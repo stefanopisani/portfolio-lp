@@ -7,7 +7,8 @@ export default function Header() {
   return (
     <header
       className={
-        "absolute w-full top-0 z-20 p-7 flex justify-between mx-auto xl:items-center"
+        "fixed w-full top-0 z-20 p-7 flex justify-between mx-auto xl:items-center " +
+        (navigation && "bg-white ")
       }
     >
       <div>
