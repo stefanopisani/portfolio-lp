@@ -16,7 +16,7 @@ function Intro({}: Props) {
       className="bg-[rgb(6,6,6)] text-white h-screen"
     >
       <div className="grid h-screen place-items-center">
-        <h1 className="text-3xl tracking-widest"> LP LOGO</h1>
+        <h1 className="text-3xl tracking-widest">LP Architecture</h1>
       </div>
     </motion.div>
   );

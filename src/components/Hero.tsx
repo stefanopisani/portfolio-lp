@@ -2,14 +2,13 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
-type Props = {};
-type slide = {
+export type Project = {
   url: string;
   id: number;
   title: string;
 };
 
-export const slides: slide[] = [
+export const slides: Project[] = [
   { url: "/sito1.png", id: 1, title: "Palazzo Uno" },
   { url: "/Esterna.jpg", id: 2, title: "Villa Ipsilon" },
   { url: "/sito2.png", id: 3, title: "Casa Beta" },
@@ -18,7 +17,7 @@ export const slides: slide[] = [
   // { url: "/Ballatoio.jpg" },
   // { url: "/ED-HQ_MI_RENDER-INTERNO_3.png" },
 ];
-function Hero({}: Props) {
+function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {

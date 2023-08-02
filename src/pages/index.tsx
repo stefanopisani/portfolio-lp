@@ -13,7 +13,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setShouldShowIntro(false);
-    }, 10);
+    }, 1000);
   }, []);
 
   const displayHero = !navigation ? <Hero /> : null;

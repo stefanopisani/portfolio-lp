@@ -2,40 +2,35 @@ import Header from "@/components/Header";
 import Menu from "@/components/Menu";
 import AppContext from "@/context/AppContext";
 import React, { useContext, useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  MotionValue,
-} from "framer-motion";
-import { slides } from "@/components/Hero";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { slides as projects } from "@/components/Hero";
 import Link from "next/link";
+import { Project } from "@/components/Hero";
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-function Project({ slide }: { slide: any }) {
+function Project({ project }: { project: Project }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 100);
+  const y = useParallax(scrollYProgress, 250);
 
   return (
     <section className="mb-10 max-w-xl">
       <div ref={ref} className="cursor-pointer">
-        <Link href={"/project"}>
+        <Link href={`/projects/${project.url}`}>
           <img
-            src={slide.url}
+            src={project.url}
             alt="A London skyscraper"
-            className="h-[350px]"
+            className="h-[400px]"
           />
         </Link>
         <motion.h2
           style={{ y }}
           className="mt-[-50px] mb-[50px] text-2xl text-white"
         >
-          {slide.title}
+          {project.title}
         </motion.h2>
         <motion.h2>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus at
@@ -58,11 +53,11 @@ function Projects() {
           <Menu />
         </>
       ) : (
-        <div className="grid h-screen place-items-center mb-[200px]">
+        <div className="grid place-items-center">
           <Header />
-          <div className="mt-[100px]">
-            {slides.map((slide) => (
-              <Project key={slide.id} slide={slide} />
+          <div className="mt-[100px] mb-[150px]">
+            {projects.map((project) => (
+              <Project key={project.id} project={project} />
             ))}
           </div>
         </div>
