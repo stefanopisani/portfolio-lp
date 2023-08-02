@@ -19,7 +19,7 @@ function Project({ project }: { project: Project }) {
   return (
     <section className="mb-10 max-w-xl">
       <div ref={ref} className="cursor-pointer">
-        <Link href={`/projects/${project.url}`}>
+        <Link href={`/projects/${project.id}`}>
           <img
             src={project.url}
             alt="A London skyscraper"

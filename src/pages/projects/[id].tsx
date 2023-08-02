@@ -7,12 +7,12 @@ type Props = {};
 function ProjectPage() {
   const router = useRouter();
   const projectIndex = Number(router.query.id);
-  const project = slides[projectIndex];
+  const project = slides.find((slide) => slide.id === projectIndex);
 
   return (
     <div>
-      <h1>{project.title}</h1>
-      <img src={project.url} alt="" />
+      <h1>{project?.title}</h1>
+      <img src={project?.url} alt="" />
     </div>
   );
 }
