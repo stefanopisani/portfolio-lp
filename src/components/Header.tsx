@@ -4,11 +4,15 @@ import React, { useContext } from "react";
 export default function Header() {
   const { menuActive, setMenuActive, navigation } = useContext(AppContext);
   const headerColor = navigation ? "black" : "white";
+  const headerBorder = menuActive
+    ? "border-none"
+    : "border-b-[1px] border-gray-100";
+
   return (
     <header
       className={
-        "fixed w-full top-0 z-20 p-7 flex justify-between mx-auto xl:items-center " +
-        (navigation && "bg-white ")
+        "fixed w-full top-0 z-20 p-6 flex justify-between mx-auto xl:items-center " +
+        (navigation && "bg-white " + headerBorder)
       }
     >
       <div>

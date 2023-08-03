@@ -2,12 +2,15 @@ import Header from "@/components/Header";
 import Menu from "@/components/Menu";
 import AppContext from "@/context/AppContext";
 import Link from "next/link";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 type Props = {};
 
 function About({}: Props) {
   const { menuActive, setNavigation } = useContext(AppContext);
+  useEffect(() => {
+    setNavigation(true);
+  }, []);
 
   return (
     <>
