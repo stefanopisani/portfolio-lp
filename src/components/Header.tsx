@@ -1,12 +1,21 @@
 import AppContext from "@/context/AppContext";
+import { useRouter } from "next/router";
 import React, { useContext } from "react";
 
 export default function Header() {
-  const { menuActive, setMenuActive, navigation } = useContext(AppContext);
+  const { menuActive, setMenuActive, navigation, setNavigation } =
+    useContext(AppContext);
+  const router = useRouter();
   const headerColor = navigation ? "black" : "white";
   const headerBorder = menuActive
     ? "border-none"
     : "border-b-[1px] border-gray-100";
+
+  const handleLogoClick = () => {
+    setMenuActive(false);
+    setNavigation(false);
+    router.push("/");
+  };
 
   return (
     <header
@@ -21,7 +30,7 @@ export default function Header() {
             "font-sans text-2xl tracking-widest cursor-pointer text-" +
             (menuActive ? "black" : headerColor)
           }
-          onClick={() => setMenuActive(false)}
+          onClick={() => handleLogoClick()}
         >
           LPA
         </h1>

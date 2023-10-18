@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
 export type Project = {
@@ -31,6 +31,11 @@ function Hero() {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => nextSlide(), 1500);
+    return () => clearInterval(intervalId);
+  });
 
   return (
     <motion.div
