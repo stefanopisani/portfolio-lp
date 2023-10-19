@@ -14,8 +14,10 @@ function Menu({}: Props) {
           <Link
             href={"/about"}
             onClick={() => {
-              setMenuActive(false);
-              setNavigation(true);
+              setTimeout(() => {
+                setMenuActive(false);
+                setNavigation(true);
+              }, 300);
             }}
           >
             About
@@ -26,8 +28,10 @@ function Menu({}: Props) {
           <Link
             href={"/projects"}
             onClick={() => {
-              setMenuActive(false);
-              setNavigation(true);
+              setTimeout(() => {
+                setMenuActive(false);
+                setNavigation(true);
+              }, 300);
             }}
           >
             Projects

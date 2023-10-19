@@ -9,14 +9,14 @@ export type Project = {
 };
 
 export const slides: Project[] = [
-  { url: "/sito1.png", id: 1, title: "Palazzo Uno" },
-  { url: "/Esterna.jpg", id: 2, title: "Villa Ipsilon" },
-  { url: "/sito2.png", id: 3, title: "Casa Beta" },
-  // { url: "/sito3.JPG" },
-  { url: "/Notturna.jpg", id: 4, title: "Edificio Notte" },
-  // { url: "/Ballatoio.jpg" },
-  // { url: "/ED-HQ_MI_RENDER-INTERNO_3.png" },
+  { url: "/q/D10BALLATOIO.png", id: 1, title: "Palazzo Uno" },
+  { url: "/q/D10CORTE.png", id: 2, title: "Chalet Bello" },
+  { url: "/q/EDLATO.png", id: 3, title: "Villa Ipsilon" },
+  { url: "/q/MARCONI1.png", id: 4, title: "Casa Beta" },
+  { url: "/q/MARCONI2.png", id: 5, title: "Edificio Epsylon" },
+  { url: "/q/D10NOTTE.png", id: 6, title: "Edificio Notte" },
 ];
+
 function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -33,7 +33,8 @@ function Hero() {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(() => nextSlide(), 1500);
+    console.log(slides[currentIndex].url);
+    const intervalId = setInterval(() => nextSlide(), 2500);
     return () => clearInterval(intervalId);
   });
 
