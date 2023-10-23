@@ -31,17 +31,30 @@ function Hero({ slides }: Props) {
     return () => clearInterval(intervalId);
   });
 
+  const zInd = (index: number) => {
+    if (index === currentIndex) {
+      return `z-10`;
+    } else {
+      return `z-0`;
+    }
+  };
+
   return (
     <div className="h-screen m-auto relative group">
-      <div
-        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className="w-full h-full bg-center bg-cover"
-      ></div>
-      <div className="arrow left-5">
+      {slides.map((slide, index) => (
+        <div
+          key={slide.id}
+          style={{ backgroundImage: `url(${slide.url})` }}
+          className={`w-full h-full bg-center bg-cover absolute top-0 ${zInd(
+            index
+          )}`}
+        ></div>
+      ))}
+      <div className="arrow left-5 z-20">
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
       </div>
 
-      <div className="arrow right-5">
+      <div className="arrow right-5 z-20">
         <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
     </div>
