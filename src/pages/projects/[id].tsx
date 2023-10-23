@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { slides } from "@/components/Hero";
+import { slides } from "..";
 import { useRouter } from "next/router";
 import AppContext from "@/context/AppContext";
 import Header from "@/components/Header";

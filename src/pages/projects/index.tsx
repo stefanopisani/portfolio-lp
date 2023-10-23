@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Menu from "@/components/Menu";
 import AppContext from "@/context/AppContext";
 import React, { useContext, useEffect } from "react";
-import { slides as projects } from "@/components/Hero";
+import { slides as projects } from "..";
 import Link from "next/link";
 import Image from "next/image";
 
