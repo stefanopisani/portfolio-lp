@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { slides } from "..";
+import { slidesMobile } from "..";
 import { useRouter } from "next/router";
 import AppContext from "@/context/AppContext";
 import Header from "@/components/Header";
@@ -11,7 +11,7 @@ function ProjectPage() {
   const { menuActive, setNavigation } = useContext(AppContext);
   const router = useRouter();
   const projectIndex = Number(router.query.id);
-  const project = slides.find((slide) => slide.id === projectIndex);
+  const project = slidesMobile.find((slide) => slide.id === projectIndex);
 
   useEffect(() => {
     setNavigation(true);
