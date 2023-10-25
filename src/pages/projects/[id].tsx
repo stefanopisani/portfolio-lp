@@ -18,18 +18,8 @@ function ProjectPage() {
   }, []);
   return (
     <>
-      {menuActive ? (
-        <>
-          <Header />
-          <Menu />
-        </>
-      ) : (
-        <>
-          <Header />
-          <h1>{project?.title}</h1>
-          <img src={project?.url} alt="" />
-        </>
-      )}
+      <h1>{project?.title}</h1>
+      <img src={project?.url} alt="" />
     </>
   );
 }

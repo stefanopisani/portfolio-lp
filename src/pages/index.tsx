@@ -25,6 +25,7 @@ export const slidesMobile: Project[] = [
 
 export default function Home() {
   const [width, setWidth] = useState<number>(0);
+  const [shouldShowIntro, setShouldShowIntro] = useState(true);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
@@ -33,42 +34,27 @@ export default function Home() {
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
-
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
   }, []);
-
-  const isMobile = width <= 768;
-
-  const slides = isMobile ? slidesMobile : slidesDesktop;
-
-  const { menuActive, navigation } = useContext(AppContext);
-  const [shouldShowIntro, setShouldShowIntro] = useState(true);
-
   useEffect(() => {
     setTimeout(() => {
       setShouldShowIntro(false);
-    }, 1000);
+    }, 1600);
   }, []);
 
-  const displayHero = !navigation ? <Hero slides={slides} /> : null;
+  const isMobile = width <= 768;
+  const slides = isMobile ? slidesMobile : slidesDesktop;
+
   return (
     <div>
       <Head>
         <title> LP Architecture</title>
       </Head>
-
-      {shouldShowIntro ? (
-        <Intro />
-      ) : (
-        <>
-          <Header />
-          {menuActive ? <Menu /> : displayHero}
-        </>
-      )}
+      {shouldShowIntro ? <Intro /> : <Hero slides={slides} />}
     </div>
   );
 }

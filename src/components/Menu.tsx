@@ -17,7 +17,7 @@ function Menu({}: Props) {
               setTimeout(() => {
                 setMenuActive(false);
                 setNavigation(true);
-              }, 300);
+              }, 500);
             }}
           >
             About
@@ -31,7 +31,7 @@ function Menu({}: Props) {
               setTimeout(() => {
                 setMenuActive(false);
                 setNavigation(true);
-              }, 300);
+              }, 500);
             }}
           >
             Projects
