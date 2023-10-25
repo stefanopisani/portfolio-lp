@@ -2,6 +2,7 @@ import AppContext from "@/context/AppContext";
 import { useRouter } from "next/router";
 import React, { useContext } from "react";
 import Menu from "./Menu";
+import Image from "next/image";
 
 export default function Header() {
   const { menuActive, setMenuActive, navigation, setNavigation } =
@@ -26,16 +27,15 @@ export default function Header() {
           (navigation && "bg-white " + headerBorder)
         }
       >
-        <div>
-          <h1
-            className={
-              "font-sans text-2xl tracking-widest cursor-pointer text-" +
-              (menuActive ? "black" : headerColor)
-            }
-            onClick={() => handleLogoClick()}
-          >
-            LPA
-          </h1>
+        <div onClick={() => handleLogoClick()}>
+          <Image
+            className="cursor-pointer"
+            src="/01_LOGO_LP.png"
+            alt="logo"
+            width={50}
+            height={50}
+            priority
+          />
         </div>
         <div
           className={

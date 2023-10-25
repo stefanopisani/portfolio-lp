@@ -43,7 +43,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setShouldShowIntro(false);
-    }, 1600);
+    }, 1300);
   }, []);
 
   const isMobile = width <= 768;
