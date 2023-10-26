@@ -1,10 +1,9 @@
-import Header from "@/components/Header";
 import Hero, { Project } from "@/components/Hero";
 import Intro from "@/components/Intro";
-import Menu from "@/components/Menu";
 import Head from "next/head";
 import { useContext, useEffect, useState } from "react";
 import AppContext from "@/context/AppContext";
+import useCheckMobile from "../../hooks/useCheckMobile";
 
 export const slidesDesktop: Project[] = [
   { url: "/VIETRI1.jpg", id: 1, title: "Palazzo Due" },
@@ -24,29 +23,20 @@ export const slidesMobile: Project[] = [
 ];
 
 export default function Home() {
-  const [width, setWidth] = useState<number>(0);
+  const { setNavigation } = useContext(AppContext);
   const [shouldShowIntro, setShouldShowIntro] = useState(true);
-
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
+  const isMobile = useCheckMobile();
 
   useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
+    setNavigation(false);
+  }, [setNavigation]);
+
   useEffect(() => {
     setTimeout(() => {
       setShouldShowIntro(false);
-    }, 1300);
+    }, 1600);
   }, []);
 
-  const isMobile = width <= 768;
   const slides = isMobile ? slidesMobile : slidesDesktop;
 
   return (

@@ -8,7 +8,6 @@ export default function Header() {
   const { menuActive, setMenuActive, navigation, setNavigation } =
     useContext(AppContext);
   const router = useRouter();
-  const headerColor = navigation ? "black" : "white";
   const headerBorder = menuActive
     ? "border-none"
     : "border-b-[1px] border-gray-100";
@@ -23,7 +22,7 @@ export default function Header() {
     <>
       <header
         className={
-          "fixed w-full top-0 z-20 p-6 flex justify-between mx-auto xl:items-center " +
+          "fixed w-full top-0 z-20 pb-2 lg:pb-4 p-6 flex justify-between mx-auto xl:items-center " +
           (navigation && "bg-white " + headerBorder)
         }
       >
@@ -32,8 +31,8 @@ export default function Header() {
             className="cursor-pointer"
             src="/01_LOGO_LP.png"
             alt="logo"
-            width={50}
-            height={50}
+            width={30}
+            height={30}
             priority
           />
         </div>
