@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 
 type Props = {};
 
+const isBrowser = () => typeof window !== "undefined";
+const larg = isBrowser() && window.innerWidth;
+
 const useCheckMobile = () => {
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(larg);
 
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
@@ -20,7 +23,9 @@ const useCheckMobile = () => {
     };
   }, []);
 
-  return width <= 768;
+  if (typeof width !== "boolean") {
+    return width <= 768;
+  }
 };
 
 export default useCheckMobile;

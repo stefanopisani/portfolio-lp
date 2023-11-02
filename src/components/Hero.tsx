@@ -8,7 +8,7 @@ export type Project = {
 };
 
 type Props = {
-  slides: Project[];
+  slides: any;
 };
 
 function Hero({ slides }: Props) {
@@ -41,10 +41,10 @@ function Hero({ slides }: Props) {
 
   return (
     <div className="h-screen m-auto relative group">
-      {slides.map((slide, index) => (
+      {slides.map((slide: any, index: number) => (
         <div
           key={slide.id}
-          style={{ backgroundImage: `url(${slide.url})` }}
+          style={{ backgroundImage: `url(${slide.image})` }}
           className={`w-full h-full bg-center bg-cover absolute top-0 ${zInd(
             index
           )}`}
