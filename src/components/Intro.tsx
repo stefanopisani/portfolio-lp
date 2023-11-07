@@ -11,8 +11,9 @@ function Intro({}: Props) {
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
         transition={{
-          duration: 1.5,
-          delay: 1,
+          ease: "linear",
+          delay: 3,
+          duration: 1,
         }}
         viewport={{ once: true }}
         className="bg-[rgb(6,6,6)] text-white h-screen"

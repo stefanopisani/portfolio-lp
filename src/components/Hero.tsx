@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import Intro from "./Intro";
 
 export type Project = {
   url: string;
@@ -13,6 +14,7 @@ type Props = {
 
 function Hero({ slides }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [shouldShowIntro, setShouldShowIntro] = useState(true);
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -31,6 +33,12 @@ function Hero({ slides }: Props) {
     return () => clearInterval(intervalId);
   });
 
+  useEffect(() => {
+    setTimeout(() => {
+      setShouldShowIntro(false);
+    }, 4000);
+  }, []);
+
   const zInd = (index: number) => {
     if (index === currentIndex) {
       return `z-10`;
@@ -41,6 +49,7 @@ function Hero({ slides }: Props) {
 
   return (
     <div className="h-screen m-auto relative group">
+      {shouldShowIntro && <Intro />}
       {slides.map((slide: any, index: number) => (
         <div
           key={slide.id}

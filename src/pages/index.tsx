@@ -1,5 +1,4 @@
-import Hero, { Project } from "@/components/Hero";
-import Intro from "@/components/Intro";
+import Hero from "@/components/Hero";
 import Head from "next/head";
 import { useContext, useEffect, useState } from "react";
 import AppContext from "@/context/AppContext";
@@ -7,7 +6,6 @@ import useCheckMobile from "../../hooks/useCheckMobile";
 
 export default function Home() {
   const { setNavigation } = useContext(AppContext);
-  const [shouldShowIntro, setShouldShowIntro] = useState(true);
   const [results, setResults] = useState([]);
   const isMobile = useCheckMobile();
 
@@ -37,18 +35,12 @@ export default function Home() {
     setNavigation(false);
   }, [setNavigation]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShouldShowIntro(false);
-    }, 1600);
-  }, []);
-
   return (
     <div>
       <Head>
         <title> LP Architecture</title>
       </Head>
-      {shouldShowIntro ? <Intro /> : results && <Hero slides={results} />}
+      {results && <Hero slides={results} />}
     </div>
   );
 }
