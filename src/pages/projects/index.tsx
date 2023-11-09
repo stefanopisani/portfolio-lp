@@ -1,39 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import useCheckMobile from "../../../hooks/useCheckMobile";
+import projects from "../../../public/archive/projects.json";
+import AppContext from "@/context/AppContext";
 
 function Projects() {
-  const [results, setResults] = useState([]);
-  const isMobile = useCheckMobile();
+  const { setNavigation } = useContext(AppContext);
 
   useEffect(() => {
-    (async function run() {
-      const queryParam = isMobile ? "mobile" : "desktop";
-      const results = await fetch("/api/search", {
-        method: "POST",
-        body: JSON.stringify({
-          expression: `folder=Portfolio-lp/${queryParam}`,
-        }),
-      }).then((r) => r.json());
-      const images = results.resources.map((resource: any) => {
-        return {
-          id: resource.asset_id,
-          title: resource.public_id,
-          image: resource.secure_url,
-          width: resource.width,
-          height: resource.height,
-        };
-      });
-      console.log(images);
-      setResults(images);
-    })();
-  }, [isMobile]);
+    setNavigation(true);
+  }, []);
 
   return (
     <div className="grid place-items-center">
-      <div className="mt-[120px] max-w-6xl flex flex-wrap justify-between px-10">
-        {results.map((project: any) => (
+      <div className="mt-[120px] max-w-6xl flex flex-wrap place-items-center md:justify-between px-10">
+        {projects.data.map((project: any) => (
           <section
             className="mb-10 cursor-pointer sm:max-w-[300px]"
             key={project.id}
@@ -48,11 +29,11 @@ function Projects() {
                 unoptimized
               />
             </Link>
-            <h2 className="text-lg tracking-wider text-center uppercase mt-2">
-              {project.title}
+            <h2 className="text-lg tracking-wider text-center uppercase mt-3">
+              {project.name}
             </h2>
-            <h2 className="p-3 sm:p-1 font-extralight text-center uppercase">
-              Lorem ipsum dolor sit amet
+            <h2 className="pt-2 p-3 sm:p-1 font-extralight text-center uppercase">
+              {project.info}
             </h2>
           </section>
         ))}

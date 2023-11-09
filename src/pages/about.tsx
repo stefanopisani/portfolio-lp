@@ -1,7 +1,4 @@
-import Header from "@/components/Header";
-import Menu from "@/components/Menu";
 import AppContext from "@/context/AppContext";
-import Link from "next/link";
 import Image from "next/image";
 import React, { useContext, useEffect } from "react";
 
@@ -15,18 +12,17 @@ function About({}: Props) {
 
   return (
     <div className="grid place-items-center ">
-      <div className="mt-[120px] max-w-6xl flex">
+      <div className="mt-[120px] max-w-6xl flex flex-wrap place-content-center">
         {/* immagine circolare */}
-        <Image
-          src={"/286677840_742950250178632_5887949890463256510_n.jpg"}
-          alt="A London skyscraper"
-          className="h-[400px] sm:w-[300px] w-auto"
-          height={0}
-          width={0}
-          unoptimized
-        />
-        <div>
-          <h1>LP Architecture</h1>
+        <div className="relative h-[200px] md:h-[400px] w-[200px] md:w-[400px] mb-5">
+          <Image
+            src={"/286677840_742950250178632_5887949890463256510_n.jpg"}
+            alt="Foto LP Studio"
+            fill
+            className="rounded-full h-[400px] sm:w-[300px] w-auto"
+          />
+        </div>
+        <div className="sm:text-center max-[674px]:mx-3">
           <h1 className="my-3">
             Creata da Luca Pisani Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Veniam corrupti debitis placeat numquam sint sit
@@ -37,10 +33,6 @@ function About({}: Props) {
             alias dolores debitis praesentium consectetur assumenda delectus
             tenetur natus!
           </h1>
-
-          <Link href={"/projects"} onClick={() => setNavigation(false)}>
-            Progetti
-          </Link>
         </div>
       </div>
     </div>
