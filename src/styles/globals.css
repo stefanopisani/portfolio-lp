@@ -10,13 +10,13 @@
     @apply bg-black transition transform duration-500;
   }
   .first-line-active {
-    @apply rotate-45 translate-y-[9px] bg-black;
+    @apply rotate-45 translate-y-[10px] sm:translate-y-[9px] bg-black;
   }
   .second-line-active {
     @apply hidden;
   }
   .third-line-active {
-    @apply -rotate-45 -translate-y-[9px] bg-black;
+    @apply -rotate-45 -translate-y-[10px] sm:-translate-y-[9px] bg-black;
   }
   .arrow {
     @apply hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%]  text-3xl text-white cursor-pointer duration-500;

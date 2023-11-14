@@ -27,7 +27,7 @@ function ProjectPage() {
         }}
         viewport={{ once: true }}
       >
-        Pagina in costruzione
+        Pagina in manutenzione
       </motion.h1>
     </div>
   );

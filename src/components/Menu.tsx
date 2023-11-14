@@ -24,7 +24,6 @@ function Menu({}: Props) {
           </Link>
         </li>
         <li className="menu">
-          {" "}
           <Link
             href={"/projects"}
             onClick={() => {
@@ -38,7 +37,19 @@ function Menu({}: Props) {
           </Link>
         </li>
         <li className="menu">Gallery</li>
-        <li className="menu">Contacts</li>
+        <li className="menu">
+          <Link
+            href={"/contatti"}
+            onClick={() => {
+              setTimeout(() => {
+                setMenuActive(false);
+                setNavigation(true);
+              }, 500);
+            }}
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
     </div>
   );
