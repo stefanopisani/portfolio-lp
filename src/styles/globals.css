@@ -24,4 +24,7 @@
   .menu {
     @apply text-2xl tracking-wider my-1 text-center cursor-pointer hover:font-medium;
   }
+  .form {
+    @apply appearance-none text-base font-thin pb-2 my-2 leading-tight focus:outline-none w-full border-b-[1px] border-gray-700 placeholder-gray-700;
+  }
 }

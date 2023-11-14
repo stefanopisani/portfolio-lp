@@ -34,14 +34,43 @@ function About({}: Props) {
   };
 
   return (
-    <div className="grid place-items-center mt-[120px] max-w-6xl">
-      <div className=" flex flex-wrap place-content-center">
-        <h1>contatti</h1>
-        <form onSubmit={sendEmail}>
-          <input type="text" placeholder="your name" name="name" />
-          <input type="email" placeholder="your email" name="email_from" />
-          <textarea placeholder="your message" name="message" />
-          <button type="submit"> send </button>
+    <div className="grid h-screen mt-[120px]">
+      <div className="max-w-6xl sm:min-w-[400px]  min-w-[325px] mx-5">
+        <h1 className="text-3xl sm:text-center mb-5">Contatti</h1>
+        <h2 className="text-xl mb-5">
+          Entra in contatto con lo studio, mandaci un messaggio e ti
+          risponderemo il prima possibile
+        </h2>
+        <form onSubmit={sendEmail} className="max-w-lg">
+          <div>
+            <input
+              className="form"
+              type="text"
+              placeholder="Name"
+              name="name"
+            />
+          </div>
+          <div>
+            <input
+              className="form"
+              type="email"
+              placeholder="Email"
+              name="email_from"
+            />
+          </div>
+          <div>
+            <textarea
+              className="form pb-[50px]"
+              placeholder="Message"
+              name="message"
+            />
+          </div>
+          <button
+            type="submit"
+            className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+          >
+            Send
+          </button>
         </form>
       </div>
     </div>
