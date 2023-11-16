@@ -12,6 +12,8 @@ export default function Header() {
     ? "border-none"
     : "border-b-[1px] border-gray-100";
 
+  const logo = menuActive ? "/LP_BOLD_NERO.png" : "/LP_BOLD_BIANCO.png";
+
   const handleLogoClick = () => {
     setMenuActive(false);
     setNavigation(false);
@@ -29,7 +31,7 @@ export default function Header() {
         <div onClick={() => handleLogoClick()}>
           <Image
             className="cursor-pointer"
-            src="/01_LOGO_LP.png"
+            src={logo}
             alt="logo"
             width={30}
             height={30}

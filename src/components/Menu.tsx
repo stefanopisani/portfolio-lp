@@ -20,7 +20,7 @@ function Menu({}: Props) {
               }, 500);
             }}
           >
-            About
+            Studio
           </Link>
         </li>
         <li className="menu">
@@ -33,10 +33,10 @@ function Menu({}: Props) {
               }, 500);
             }}
           >
-            Projects
+            Progetti
           </Link>
         </li>
-        <li className="menu">Gallery</li>
+        <li className="menu">News</li>
         <li className="menu">
           <Link
             href={"/contatti"}
@@ -47,7 +47,7 @@ function Menu({}: Props) {
               }, 500);
             }}
           >
-            Contact
+            Contatti
           </Link>
         </li>
       </ul>

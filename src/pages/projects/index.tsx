@@ -13,7 +13,7 @@ function Projects() {
 
   return (
     <div className="grid place-items-center">
-      <div className="mt-[120px] max-w-6xl flex flex-wrap place-items-center md:justify-between px-10">
+      <div className="mt-[120px] max-w-4xl flex flex-wrap place-items-center md:justify-around px-3">
         {projects.data.map((project: any) => (
           <section
             className="mb-10 cursor-pointer sm:max-w-[300px]"
