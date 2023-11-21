@@ -22,9 +22,10 @@ function Intro({}: Props) {
           <Image
             src="/01_LOGO_LP_SDA.png"
             alt="logo"
-            width={200}
-            height={200}
-            priority
+            className="h-[300px] sm:h-[600px] w-auto mt-0 sm:mt-[-50px]"
+            height={0}
+            width={0}
+            unoptimized
           />
         </div>
       </motion.div>

@@ -14,7 +14,6 @@ function Layout({ children, font }: Props) {
       {!menuActive ? (
         <main className={`${font.variable}`}>{children}</main>
       ) : null}
-      {!menuActive && navigation ? <Footer /> : null}
     </>
   );
 }

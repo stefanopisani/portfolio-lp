@@ -12,7 +12,7 @@ function Menu({}: Props) {
       <ul>
         <li className="menu">
           <Link
-            href={"/about"}
+            href={"/studio"}
             onClick={() => {
               setTimeout(() => {
                 setMenuActive(false);

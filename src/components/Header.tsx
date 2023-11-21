@@ -11,8 +11,9 @@ export default function Header() {
   const headerBorder = menuActive
     ? "border-none"
     : "border-b-[1px] border-gray-100";
-
-  const logo = menuActive ? "/LP_BOLD_NERO.png" : "/LP_BOLD_BIANCO.png";
+  const showRightLogoColor =
+    !menuActive && navigation ? "/LP_NERO.png" : "/LP_BIANCO.png";
+  const logo = menuActive ? "/LP_NERO.png" : showRightLogoColor;
 
   const handleLogoClick = () => {
     setMenuActive(false);
@@ -49,20 +50,23 @@ export default function Header() {
             className={
               "line " +
               (menuActive && "first-line-active ") +
+              " " +
               (navigation && " line-navigation")
             }
           ></span>
           <span
             className={
               "line " +
-              (menuActive && "second-line-active ") +
-              (navigation && " line-navigation")
+              (menuActive && "second-line-active") +
+              " " +
+              (navigation && "line-navigation")
             }
           ></span>
           <span
             className={
               "line " +
               (menuActive && "third-line-active ") +
+              " " +
               (navigation && " line-navigation")
             }
           ></span>

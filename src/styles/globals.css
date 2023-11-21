@@ -4,7 +4,7 @@
 
 @layer components {
   .line {
-    @apply w-full h-[0.5px] lg:h-[1px] bg-white transition transform duration-500;
+    @apply w-full h-[0.5px] bg-white transition transform duration-500;
   }
   .line-navigation {
     @apply bg-black transition transform duration-500;
@@ -22,7 +22,7 @@
     @apply hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%]  text-3xl text-white cursor-pointer duration-500;
   }
   .menu {
-    @apply text-2xl tracking-wider my-1 text-center cursor-pointer hover:font-medium;
+    @apply text-2xl sm:text-3xl tracking-wider my-1 text-center cursor-pointer hover:font-medium;
   }
   .form {
     @apply appearance-none text-base font-thin pb-2 my-2 leading-tight focus:outline-none w-full border-b-[1px] border-gray-700 placeholder-gray-700;
