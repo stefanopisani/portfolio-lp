@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <section className="grid place-items-center px-2 mt-[50px]">
-      <div className="max-w-4xl w-full border-t-[0.75px] border-black flex justify-between pt-3 px-3 mb-3 text-sm sm:text-base font-extralight text-justify leading-relaxed">
+      <div className="max-w-4xl w-full border-t-[0.75px] border-black flex justify-between pt-3 px-3 mb-3 text-sm sm:text-base font-light text-justify leading-relaxed">
         <div onClick={() => handleLogoClick()}>
           <Image
             className="cursor-pointer h-[35px] sm:h-[45px] w-auto mt-1"
@@ -28,12 +28,22 @@ export default function Header() {
           />
         </div>
         <div>
-          <p>Instagram</p>
-          <p>Linkedin</p>
+          <a
+            className="block hover:font-normal"
+            href="https://www.instagram.com/"
+          >
+            Instagram
+          </a>
+          <a
+            className="block hover:font-normal"
+            href="https://www.linkedin.com/"
+          >
+            Linkedin
+          </a>
         </div>
 
-        <div className="grid place-content-center">
-          <p>email@gmail.com</p>
+        <div className="grid place-content-center hover:font-normal">
+          <a href="mailto:info@lpstudio.com">info@lpstudio.com</a>
         </div>
       </div>
     </section>

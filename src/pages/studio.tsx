@@ -36,14 +36,14 @@ function About({}: Props) {
               direzionali, aziendali e pubblici.
             </p>
           </div>
-          <div className="grid place-items-center sm:hidden mt-[50px]">
+          {/* <div className="grid place-items-center sm:hidden mt-[50px]">
             <span className="w-[30px] h-[0.2px] bg-black"></span>
-          </div>
+          </div> */}
 
-          <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[40px]">
+          <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[50px]">
             <Image
-              className="sm:col-span-2 w-auto grayscale hover:grayscale-0 rounded-sm"
-              src="/about/a1.jpg"
+              className="sm:col-span-2 w-auto rounded-sm"
+              src="/about/a4.jpg"
               alt="logo"
               height={0}
               width={0}
@@ -60,11 +60,11 @@ function About({}: Props) {
               </p>
             </p>
           </div>
-          <div className="grid place-items-center sm:hidden mt-[50px]">
+          {/* <div className="grid place-items-center sm:hidden mt-[50px]">
             <span className="w-[30px] h-[0.2px] bg-black"></span>
-          </div>
+          </div> */}
 
-          <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[40px]">
+          <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[50px]">
             <p className="sm:col-span-2">
               Un settore di progettazione importante per lo studio è legato
               all’ambito residenziale. In questi interventi il tema centrale è
@@ -78,7 +78,7 @@ function About({}: Props) {
               </p>
             </p>
             <Image
-              className="hidden sm:block sm:col-span-1 w-full mt-5 sm:mt-0 grayscale hover:grayscale-0 rounded-sm"
+              className="hidden sm:block sm:col-span-1 w-full mt-5 sm:mt-0 rounded-sm"
               src="/about/a2.jpg"
               alt="logo"
               height={100}
@@ -86,9 +86,9 @@ function About({}: Props) {
               unoptimized
             />
           </div>
-          <div className="grid place-items-center sm:hidden mt-[50px]">
+          {/* <div className="grid place-items-center sm:hidden mt-[50px]">
             <span className="w-[30px] h-[0.2px] bg-black"></span>
-          </div>
+          </div> */}
 
           <p className="mt-[50px]">
             Lo studio è appassionato dalle soluzioni tipologiche miste
@@ -98,13 +98,13 @@ function About({}: Props) {
             consapevolezza che in un luogo che ci fa sentire a nostro agio
             riusciamo a lavorare meglio.
           </p>
-          <div className="grid place-items-center sm:hidden mt-[50px]">
+          {/* <div className="grid place-items-center sm:hidden mt-[50px]">
             <span className="w-[30px] h-[0.2px] bg-black"></span>
-          </div>
+          </div> */}
 
-          <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[40px]">
+          <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[50px]">
             <Image
-              className="sm:col-span-2 w-full grayscale hover:grayscale-0 rounded-sm"
+              className="sm:col-span-2 w-full rounded-sm"
               src="/about/a4.jpg"
               alt="logo"
               height={0}
@@ -119,14 +119,14 @@ function About({}: Props) {
               competenze, dialogo e idee.
             </p>
           </div>
-          <div className="grid place-items-center sm:hidden mt-[50px]">
+          {/* <div className="grid place-items-center sm:hidden mt-[50px]">
             <span className="w-[30px] h-[0.2px] bg-black"></span>
-          </div>
+          </div> */}
 
           <div>
-            <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[40px]">
+            <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[50px]">
               <Image
-                className="hidden sm:col-span-1 w-full grayscale hover:grayscale-0 rounded-sm"
+                className="hidden sm:col-span-1 w-full rounded-sm"
                 src="/about/a2.jpg"
                 alt="logo"
                 height={100}
@@ -151,7 +151,7 @@ function About({}: Props) {
                 </p>
               </p>
               <Image
-                className="sm:col-span-1 hidden sm:block w-full grayscale hover:grayscale-0 rounded-sm"
+                className="sm:col-span-1 hidden sm:block w-full rounded-sm"
                 src="/about/a2.jpg"
                 alt="logo"
                 height={100}
@@ -160,12 +160,12 @@ function About({}: Props) {
               />
             </div>
           </div>
-          <div className="grid place-items-center sm:hidden mt-[50px]">
+          {/* <div className="grid place-items-center sm:hidden mt-[50px]">
             <span className="w-[30px] h-[0.2px] bg-black"></span>
-          </div>
-          <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[40px]">
+          </div> */}
+          <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[50px]">
             <Image
-              className="sm:col-span-1 w-full sm:mt-[50px] grayscale hover:grayscale-0 rounded-sm"
+              className="sm:col-span-1 w-full sm:mt-[50px] grayscale rounded-sm"
               src="/about/a3.PNG"
               alt="logo"
               height={0}
@@ -195,10 +195,10 @@ function About({}: Props) {
               commerciali.
             </p>
           </div>
-          <div className="grid place-items-center sm:hidden mt-[50px]">
+          {/* <div className="grid place-items-center sm:hidden mt-[50px]">
             <span className="w-[30px] h-[0.2px] bg-black"></span>
-          </div>
-          <div className="mt-[50px] tracking-wide">
+          </div> */}
+          <div className="mt-[50px] mb-[25px] tracking-wide">
             <p className="pb-5">
               <span className="font-extralight">Collaborazioni:</span>
               <br />

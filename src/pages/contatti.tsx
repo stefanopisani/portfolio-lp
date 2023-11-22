@@ -1,11 +1,40 @@
 import AppContext from "@/context/AppContext";
 import React, { useContext, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 type Props = {};
 
 function About({}: Props) {
   const { menuActive, setNavigation } = useContext(AppContext);
+  const notify = (action: string) => {
+    if (action === "success") {
+      toast.success("Email inviata con successo", {
+        position: "top-right",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+
+    if (action === "error") {
+      toast.error("Si è verificato un errore, ritenta", {
+        position: "top-right",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
 
   useEffect(() => {
     setNavigation(true);
@@ -24,9 +53,11 @@ function About({}: Props) {
       .then(
         (result) => {
           console.log(result.text);
+          notify("success");
         },
         (error) => {
           console.log(error.text);
+          notify("error");
         }
       );
 
@@ -82,6 +113,7 @@ function About({}: Props) {
             >
               Send
             </button>
+            <ToastContainer />
           </form>
         </div>
       </div>

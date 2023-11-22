@@ -2,99 +2,75 @@
   "data": [
     {
       "id": "1",
-      "name": "ED Headquarter",
-      "info": "Napoli",
-      "image": "https://drive.google.com/uc?export=view&id=1N6s7aNQnxzoilDH95ZP1OvjGkrvk2O3b"
+      "name": "Tescione 20",
+      "info": "Residential building",
+      "image": "https://res.cloudinary.com/duephguxa/image/upload/v1700671928/Portfolio-lp/progetti/imxoj7gqcioabf6d7b8c.png"
     },
     {
       "id": "2",
-      "name": "D10",
-      "info": "Battipaglia",
-      "image": "https://drive.google.com/uc?export=view&id=1kivA7x9JHRPaL1jz4lCP2Cd47oWxxOpJ"
+      "name": "Risorgimento palace",
+      "info": "Residential building",
+      "image": "https://res.cloudinary.com/duephguxa/image/upload/v1700671926/Portfolio-lp/progetti/d66j4sd4civjzuykkiyc.png"
     },
     {
       "id": "3",
-      "name": "Bellevue Sala Abagnano",
-      "info": "Salerno",
-      "image": "https://drive.google.com/uc?export=view&id=1TIx1xcFdv_ejlnNdj63bt2w5FsVpiRlw"
+      "name": "Bellevue villa",
+      "info": "Mockup villa",
+      "image": "https://res.cloudinary.com/duephguxa/image/upload/v1700671926/Portfolio-lp/progetti/uceksdlexykltwqewkie.png"
     },
     {
       "id": "4",
-      "name": "Risorgimento",
-      "info": "Nola",
-      "image": "https://drive.google.com/uc?export=view&id=1csYz_sp-8TKJ6DAHIOcPU0IyE4FW4g6y"
+      "name": "Headquarter E.D.",
+      "info": "Company Headquarter",
+      "image": "https://res.cloudinary.com/duephguxa/image/upload/v1700671927/Portfolio-lp/progetti/hh3ou3lfuhwiqchd9ltq.png"
     },
     {
       "id": "5",
-      "name": "Villino Salerno",
-      "info": "Basic info about this project",
-      "image": "https://drive.google.com/uc?export=view&id=1mSo8Szc2GKIRp3l68lS10R5yXfecJzfg"
+      "name": "D10",
+      "info": "Commercial and offices building",
+      "image": "https://res.cloudinary.com/duephguxa/image/upload/v1700671922/Portfolio-lp/progetti/ejkjqayoyjdwssmfa5tk.png"
     },
     {
       "id": "6",
-      "name": "Feudo",
-      "info": "Basic info about this project",
-      "image": "https://drive.google.com/uc?export=view&id=1WjMnSkMnhESfMtc5Ma3sfWqqC99rXYQ-"
+      "name": "Bellevue",
+      "info": "residential complex",
+      "image": "https://res.cloudinary.com/duephguxa/image/upload/v1700671930/Portfolio-lp/progetti/kptjslorohdimui8zsw1.png"
     },
     {
       "id": "7",
-      "name": "Chiaia",
-      "info": "Basic info about this project",
-      "image": "https://drive.google.com/uc?export=view&id=1310GFQFGjJytURmDK20YbNxcMwApQ6Zr"
+      "name": "LR_H",
+      "info": "Apartment",
+      "image": "https://res.cloudinary.com/duephguxa/image/upload/v1700671926/Portfolio-lp/progetti/fu53afzcm4sppnqkspjp.png"
     },
     {
       "id": "8",
       "name": "Marconi",
-      "info": "Basic info about this project",
-      "image": "https://drive.google.com/uc?export=view&id=1uLTEvG8CZVRsOSyAnBWvDIaw_l_RLMPd"
+      "info": "Residential building",
+      "image": "https://res.cloudinary.com/duephguxa/image/upload/v1700671926/Portfolio-lp/progetti/krlzjihsx12o8cjkchhb.png"
     },
     {
       "id": "9",
-      "name": "Pomigliano",
-      "info": "Basic info about this project",
-      "image": "https://drive.google.com/uc?export=view&id=1JK9vqF6uMUh9yJgExbjVj3gkcLzFDGR4"
+      "name": "Feudo",
+      "info": "Residential building",
+      "image": "https://res.cloudinary.com/duephguxa/image/upload/v1700671930/Portfolio-lp/progetti/wzopsxyje4dp2ff9e3ni.png"
     },
     {
       "id": "10",
-      "name": "MR H",
-      "info": "Basic info about this project",
-      "image": "https://drive.google.com/uc?export=view&id=1ClMMp8-S4vc8dnASGPC2YMYhKc93pEc9"
+      "name": "Vanoni 51",
+      "info": "Villa",
+      "image": "https://res.cloudinary.com/duephguxa/image/upload/v1700671929/Portfolio-lp/progetti/mfzdscridfrax6ircqpo.png"
     },
     {
       "id": "11",
-      "name": "Vietri",
-      "info": "Basic info about this project",
-      "image": "https://drive.google.com/uc?export=view&id=1xQzrDcj74UG_Vh8YfjEGiLV2JDP_Htbd"
+      "name": "Villa I",
+      "info": "Private villa",
+      "image": "https://res.cloudinary.com/duephguxa/image/upload/v1700671929/Portfolio-lp/progetti/fpnlrkzywqi0hsrzjskk.png"
     },
     {
       "id": "12",
-      "name": "San Massimo",
-      "info": "Basic info about this project",
-      "image": "https://drive.google.com/uc?export=view&id=1pGMB6hCSpxDsgQDNeedH2co69eUhkqCX"
-    },
-    {
-      "id": "13",
-      "name": "Capodichino Stazione",
-      "info": "Basic info about this project",
-      "image": "https://drive.google.com/uc?export=view&id=1YUP-pS8vVcaTeInJntFPQCQy0u3aVTMe"
-    },
-    {
-      "id": "14",
-      "name": "Capodichino Parcheggio",
-      "info": "Basic info about this project",
-      "image": "https://drive.google.com/uc?export=view&id=1IJaOXnW5dNGAvZb5s5Y4bEOiL-w__OEj"
-    },
-    {
-      "id": "14",
-      "name": "Villa I",
-      "info": "Basic info about this project",
-      "image": "https://drive.google.com/uc?export=view&id=1gzkBTF9G7lkxyZsXIFROB1jg2tfkcEZH"
-    },
-    {
-      "id": "15",
-      "name": "BIG",
-      "info": "Basic info about this project",
-      "image": "https://drive.google.com/uc?export=view&id=1DJwvP-2KaAL_HFaqs4YAyp90Tz3gdZT9"
+      "name": "Pool area villa I",
+      "info": "outdoor",
+      "image": "https://res.cloudinary.com/duephguxa/image/upload/v1700671930/Portfolio-lp/progetti/kynbvtvfceeglgvdifbl.png"
     }
   ]
 }
