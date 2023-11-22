@@ -13,36 +13,43 @@ function About({}: Props) {
 
   return (
     <>
-      <div className="grid place-items-center ">
-        <div className="mt-[30px] max-w-4xl flex flex-wrap place-content-center px-3">
-          <Image
-            className="cursor-pointer"
-            src="/02_LOGO_LP_SDA_NERO.png"
-            alt="logo"
-            width={200}
-            height={200}
-            priority
-          />
-          <p className="mt-[100px] text-lg font-thin text-justify leading-loose">
-            LP è uno studio di Progettazione Architettonica con sede a Napoli,
-            Italia. <br /> Fondato nel 2022 da Luca Pisani, si occupa di
-            progettazione architettonica e urbana, interior design e product
-            design. E’ formato da un gruppo multidisciplinare di professionisti
-            che realizza progetti residenziali, commerciali, direzionali,
-            aziendali e pubblici.
-          </p>
-          {/* immagini a1 a2 a4 a2 a3 */}
-          {/* 1 image */}
+      <div className="grid place-items-center tracking-wide sm:tracking-wider text-base sm:text-lg font-thin text-justify leading-relaxed">
+        <div className="mt-[150px] max-w-4xl px-3">
+          <div className="grid place-items-center">
+            <Image
+              className="cursor-pointer"
+              src="/LP_NERO.png"
+              alt="logo"
+              width={100}
+              height={100}
+              priority
+            />
+            <p className="uppercase mt-[60px] tracking-widest">
+              <span className="font-normal">LP</span> Studio di architettura
+            </p>
+            <p className="mt-[60px]">
+              LP è uno studio di Progettazione Architettonica con sede a Napoli,
+              Italia. <br /> Fondato nel 2022 da Luca Pisani, si occupa di
+              progettazione architettonica e urbana, interior design e product
+              design. E’ formato da un gruppo multidisciplinare di
+              professionisti che realizza progetti residenziali, commerciali,
+              direzionali, aziendali e pubblici.
+            </p>
+          </div>
+          <div className="grid place-items-center sm:hidden mt-[50px]">
+            <span className="w-[30px] h-[0.2px] bg-black"></span>
+          </div>
+
           <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[40px]">
             <Image
-              className="sm:col-span-2 w-auto"
+              className="sm:col-span-2 w-auto grayscale hover:grayscale-0 rounded-sm"
               src="/about/a1.jpg"
               alt="logo"
               height={0}
               width={0}
               unoptimized
             />
-            <p className="sm:col-span-1 text-lg font-thin text-justify leading-loose">
+            <p className="sm:col-span-1 mt-5 sm:mt-0">
               LP sviluppa progetti accurati e rigorosi, rivolgendo particolare
               attenzione alla composizione architettonica e alla qualità
               estetica. <br />
@@ -53,9 +60,12 @@ function About({}: Props) {
               </p>
             </p>
           </div>
-          {/* 2 image */}
+          <div className="grid place-items-center sm:hidden mt-[50px]">
+            <span className="w-[30px] h-[0.2px] bg-black"></span>
+          </div>
+
           <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[40px]">
-            <p className="sm:col-span-2  text-lg font-thin text-justify leading-loose">
+            <p className="sm:col-span-2">
               Un settore di progettazione importante per lo studio è legato
               all’ambito residenziale. In questi interventi il tema centrale è
               la rigenerazione urbana attraverso la ricostruzione o il retrofi
@@ -68,7 +78,7 @@ function About({}: Props) {
               </p>
             </p>
             <Image
-              className="sm:col-span-1 w-full mt-5 sm:mt-0"
+              className="hidden sm:block sm:col-span-1 w-full mt-5 sm:mt-0 grayscale hover:grayscale-0 rounded-sm"
               src="/about/a2.jpg"
               alt="logo"
               height={100}
@@ -76,8 +86,11 @@ function About({}: Props) {
               unoptimized
             />
           </div>
-          {/* text */}
-          <p className="mt-[50px] text-lg font-thin text-justify leading-loose">
+          <div className="grid place-items-center sm:hidden mt-[50px]">
+            <span className="w-[30px] h-[0.2px] bg-black"></span>
+          </div>
+
+          <p className="mt-[50px]">
             Lo studio è appassionato dalle soluzioni tipologiche miste
             commerciale-direzionale. L’attenzione progettuale si concentra
             sull’importanza della qualità degli ambienti di lavoro, della luce e
@@ -85,17 +98,20 @@ function About({}: Props) {
             consapevolezza che in un luogo che ci fa sentire a nostro agio
             riusciamo a lavorare meglio.
           </p>
-          {/* 3 image */}
+          <div className="grid place-items-center sm:hidden mt-[50px]">
+            <span className="w-[30px] h-[0.2px] bg-black"></span>
+          </div>
+
           <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[40px]">
             <Image
-              className="sm:col-span-2 w-full"
+              className="sm:col-span-2 w-full grayscale hover:grayscale-0 rounded-sm"
               src="/about/a4.jpg"
               alt="logo"
               height={0}
               width={0}
               unoptimized
             />
-            <p className="sm:col-span-1 text-lg font-thin text-justify leading-loose mt-5 sm:mt-0">
+            <p className="sm:col-span-1 mt-5 sm:mt-0">
               L’aspirazione della ricerca progettuale riferita a tali amibiti è
               creare valore aggiunto attraverso la concezione degli spazi
               comuni, intesi come piccole piazze urbane coperte, luoghi di sosta
@@ -103,11 +119,14 @@ function About({}: Props) {
               competenze, dialogo e idee.
             </p>
           </div>
-          {/* 4 image */}
+          <div className="grid place-items-center sm:hidden mt-[50px]">
+            <span className="w-[30px] h-[0.2px] bg-black"></span>
+          </div>
+
           <div>
             <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[40px]">
               <Image
-                className="sm:col-span-1 sm:hidden w-full"
+                className="hidden sm:col-span-1 w-full grayscale hover:grayscale-0 rounded-sm"
                 src="/about/a2.jpg"
                 alt="logo"
                 height={100}
@@ -115,7 +134,7 @@ function About({}: Props) {
                 unoptimized
               />
 
-              <p className="sm:col-span-2 text-lg font-thin text-justify leading-loose mt-5 sm:mt-0">
+              <p className="sm:col-span-2">
                 Gli headquarters sono progettati per essere il manifesto
                 aziendale. Lo sviluppo progettuale fa propri i valori identitari
                 societari e culmina nel concetto di casa aziendale.
@@ -132,7 +151,7 @@ function About({}: Props) {
                 </p>
               </p>
               <Image
-                className="sm:col-span-1 hidden sm:block w-full"
+                className="sm:col-span-1 hidden sm:block w-full grayscale hover:grayscale-0 rounded-sm"
                 src="/about/a2.jpg"
                 alt="logo"
                 height={100}
@@ -141,17 +160,19 @@ function About({}: Props) {
               />
             </div>
           </div>
-          {/* 5 image finale */}
+          <div className="grid place-items-center sm:hidden mt-[50px]">
+            <span className="w-[30px] h-[0.2px] bg-black"></span>
+          </div>
           <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[40px]">
             <Image
-              className="sm:col-span-1 w-full sm:mt-[50px] grayscale"
+              className="sm:col-span-1 w-full sm:mt-[50px] grayscale hover:grayscale-0 rounded-sm"
               src="/about/a3.PNG"
               alt="logo"
               height={0}
               width={0}
               unoptimized
             />
-            <p className="sm:col-span-2 text-lg font-thin text-justify leading-loose mt-5 sm:mt-0">
+            <p className="sm:col-span-2 mt-5 sm:mt-0">
               <span className="font-light">Luca Pisani</span>
               <br />
               Laureato alla Federico II di Napoli, inizia a collaborare in studi
@@ -174,18 +195,19 @@ function About({}: Props) {
               commerciali.
             </p>
           </div>
-
-          {/* text */}
-          <div className="text-lg font-thin text-justify my-[75px]">
+          <div className="grid place-items-center sm:hidden mt-[50px]">
+            <span className="w-[30px] h-[0.2px] bg-black"></span>
+          </div>
+          <div className="mt-[50px] tracking-wide">
             <p className="pb-5">
-              Collaborazioni:
+              <span className="font-extralight">Collaborazioni:</span>
               <br />
               Antonello De Leo, Lucia Ricci, Stefano Lacala, Alessandro Ruopolo,
               Mauro Maiellaro, Marco Imperatrice, Gianluca Micera, Stefano
               Pisani, Alfredo Foglia, Lorenzo Patitucci, Donatella De Falco.
             </p>
             <p>
-              Principali Clienti:
+              <span className="font-extralight">Principali Clienti:</span>
               <br />
               Magri Costruzioni s.r.l. &nbsp; Energy Drive S.r.l. &nbsp;Iesu
               S.p.A. &nbsp;Promec Immobiliare s.r.l. &nbsp;SM Property Solution
