@@ -23,16 +23,16 @@ function Projects() {
               <Image
                 src={`${project.image}`}
                 alt="A London skyscraper"
-                className="sm:h-[300px] h-auto w-auto grayscale hover:grayscale-0 rounded-sm"
+                className="sm:h-[300px] h-auto w-auto grayscale-[75%] hover:grayscale-0 rounded-sm"
                 height={0}
                 width={0}
                 unoptimized
               />
             </Link>
-            <h2 className="text-lg tracking-widest text-center uppercase mt-2">
+            <h2 className="text-sm tracking-widest text-center uppercase mt-2">
               {project.name}
             </h2>
-            <h2 className="tracking-wider font-extralight text-center uppercase">
+            <h2 className="text-xs tracking-wider font-extralight text-center uppercase">
               {project.info}
             </h2>
           </section>
