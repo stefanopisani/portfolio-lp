@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import Intro from "./Intro";
+import Image from "next/image";
 
 export type Project = {
   url: string;
@@ -51,13 +52,19 @@ function Hero({ slides }: Props) {
     <div className="h-screen m-auto relative group">
       {shouldShowIntro && <Intro />}
       {slides.map((slide: any, index: number) => (
-        <div
+        <Image
           key={slide.id}
-          style={{ backgroundImage: `url(${slide.image})` }}
-          className={`w-full h-full bg-center bg-cover absolute top-0 ${zInd(
+          alt={slide.title}
+          src={slide.image}
+          className={`w-full h-full bg-center object-cover absolute top-0 ${zInd(
             index
           )}`}
-        ></div>
+          height={0}
+          width={0}
+          loading="eager"
+          priority
+          unoptimized
+        />
       ))}
       <div className="arrow left-5 z-20">
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
