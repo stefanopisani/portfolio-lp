@@ -64,7 +64,7 @@ function About({}: Props) {
             <span className="w-[30px] h-[0.2px] bg-black"></span>
           </div> */}
 
-          <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[50px]">
+          <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[50px] justify-center items-center">
             <p className="sm:col-span-2">
               Un settore di progettazione importante per lo studio è legato
               all’ambito residenziale. In questi interventi il tema centrale è
@@ -124,7 +124,7 @@ function About({}: Props) {
           </div> */}
 
           <div>
-            <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[50px]">
+            <div className="mt-[50px] grid sm:grid-cols-3 sm:gap-[50px] justify-center items-center">
               <Image
                 className="hidden sm:col-span-1 w-full rounded-sm"
                 src="/about/a2.jpg"

@@ -31,7 +31,7 @@ export default function Header() {
       >
         <div onClick={() => handleLogoClick()}>
           <Image
-            className="cursor-pointer"
+            className="cursor-pointer hover:animate-pulse"
             src={logo}
             alt="logo"
             width={30}
@@ -41,7 +41,7 @@ export default function Header() {
         </div>
         <div
           className={
-            "w-7 h-5 mt-2 flex flex-col justify-between cursor-pointer " +
+            "w-7 h-5 mt-2 flex flex-col justify-between cursor-pointer hover:animate-pulse " +
             (menuActive && "active")
           }
           onClick={() => setMenuActive(!menuActive)}

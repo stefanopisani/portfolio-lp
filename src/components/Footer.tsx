@@ -3,9 +3,8 @@ import React, { useContext } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-export default function Header() {
-  const { menuActive, setMenuActive, navigation, setNavigation } =
-    useContext(AppContext);
+export default function Footer() {
+  const { setMenuActive, setNavigation } = useContext(AppContext);
   const router = useRouter();
 
   const handleLogoClick = () => {
@@ -19,7 +18,7 @@ export default function Header() {
       <div className="max-w-4xl w-full border-t-[0.75px] border-black flex justify-between pt-3 px-3 mb-3 text-sm sm:text-base font-light text-justify leading-relaxed">
         <div onClick={() => handleLogoClick()}>
           <Image
-            className="cursor-pointer h-[35px] sm:h-[45px] w-auto mt-1"
+            className="cursor-pointer h-[35px] sm:h-[45px] w-auto mt-1 hover:animate-pulse"
             src="/LP_NERO.png"
             alt="logo"
             width={0}
@@ -30,13 +29,13 @@ export default function Header() {
         <div>
           <a
             className="block hover:font-normal"
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com"
           >
             Instagram
           </a>
           <a
             className="block hover:font-normal"
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com"
           >
             Linkedin
           </a>

@@ -6,8 +6,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 type Props = {};
 
-function About({}: Props) {
-  const { menuActive, setNavigation } = useContext(AppContext);
+function About({}) {
+  const { setNavigation } = useContext(AppContext);
   const notify = (action: string) => {
     if (action === "success") {
       toast.success("Email inviata con successo", {
@@ -65,10 +65,10 @@ function About({}: Props) {
   };
 
   return (
-    <div className="flex items-center pt-[85px] h-[calc(100vh-85px)] justify-center align-middle mb-[100px]">
+    <div className="flex items-center pt-[85px] sm:pt-[125px] h-[calc(100vh-85px)] justify-center align-middle mb-[100px]">
       <div className="max-w-4xl sm:min-w-[400px] min-w-[325px] mx-5 grid sm:grid-cols-2">
         <div className="sm:mb-0 mb-[50px]">
-          <h1 className="text-xl mb-5 font-thin">Contatti</h1>
+          <h1 className="text-xl mb-5 font-normal">Contatti</h1>
 
           <h2 className="text-base font-light">081 5756035</h2>
           <h2 className="text-base font-light">info@lpstudio.com</h2>
@@ -77,9 +77,9 @@ function About({}: Props) {
         </div>
 
         <div className="max-w-sm">
-          <h1 className="text-xl mb-5 font-thin">Form</h1>
+          <h1 className="text-xl mb-5 font-normal">Form</h1>
 
-          <h2 className="text-base mt-5 mb-5 font-thin leading-relaxed">
+          <h2 className="text-base mt-5 mb-5 font-thin">
             Entra in contatto con lo studio, mandaci un messaggio e ti
             risponderemo il prima possibile
           </h2>
