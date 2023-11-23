@@ -65,25 +65,25 @@ function About({}: Props) {
   };
 
   return (
-    <div className="grid mt-[120px] place-items-center mb-[100px]">
+    <div className="flex items-center pt-[85px] h-[calc(100vh-85px)] justify-center align-middle mb-[100px]">
       <div className="max-w-4xl sm:min-w-[400px] min-w-[325px] mx-5 grid sm:grid-cols-2">
         <div className="sm:mb-0 mb-[50px]">
-          <h1 className="text-3xl mb-5 font-thin">Contatti</h1>
+          <h1 className="text-xl mb-5 font-thin">Contatti</h1>
 
-          <h2 className="text-lg font-light">081 5756035</h2>
-          <h2 className="text-lg font-light">info@lpstudio.com</h2>
-          <h2 className="text-lg font-light">Via A. Manzoni 1003</h2>
-          <h2 className="text-lg font-light">Napoli, 80123</h2>
+          <h2 className="text-base font-light">081 5756035</h2>
+          <h2 className="text-base font-light">info@lpstudio.com</h2>
+          <h2 className="text-base font-light">Via A. Manzoni 1003</h2>
+          <h2 className="text-base font-light">Napoli, 80123</h2>
         </div>
 
-        <div>
-          <h1 className="text-3xl mb-5 font-thin">Form</h1>
+        <div className="max-w-sm">
+          <h1 className="text-xl mb-5 font-thin">Form</h1>
 
-          <h2 className="text-xl mt-5 mb-5 font-thin leading-relaxed">
+          <h2 className="text-base mt-5 mb-5 font-thin leading-relaxed">
             Entra in contatto con lo studio, mandaci un messaggio e ti
             risponderemo il prima possibile
           </h2>
-          <form onSubmit={sendEmail} className="max-w-lg">
+          <form onSubmit={sendEmail} className="max-w-sm">
             <div>
               <input
                 className="form"

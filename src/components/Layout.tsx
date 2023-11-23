@@ -9,12 +9,12 @@ type Props = { children: any; font: NextFontWithVariable };
 function Layout({ children, font }: Props) {
   const { menuActive, navigation } = useContext(AppContext);
   return (
-    <>
+    <div className="min-h-screen">
       <Header />
       {!menuActive ? (
         <main className={`${font.variable}`}>{children}</main>
       ) : null}
-    </>
+    </div>
   );
 }
 
