@@ -56,7 +56,7 @@ function Hero({ slides }: Props) {
           key={slide.id}
           alt={slide.title}
           src={slide.image}
-          className={`w-full h-full bg-center object-cover absolute top-0 ${zInd(
+          className={`w-full h-full bg-center bg-cover absolute top-0 ${zInd(
             index
           )}`}
           height={0}
