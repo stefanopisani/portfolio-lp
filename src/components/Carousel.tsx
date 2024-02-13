@@ -28,7 +28,6 @@ function Carousel({ slides }: Props) {
       {shouldShowIntro && <Intro />}
       {slides.length > 0 && (
         <ReactCarousel
-          autoFocus
           animationHandler="fade"
           autoPlay
           infiniteLoop
@@ -41,16 +40,28 @@ function Carousel({ slides }: Props) {
           stopOnHover={false}
           renderArrowPrev={(clickHandler, hasPrev) => {
             return (
-              <div className="arrow left-5 z-20" onClick={clickHandler}>
-                <BsChevronCompactLeft size={30} />
+              <div
+                className={`${
+                  hasPrev ? "absolute" : "hidden"
+                } top-0 bottom-0 left-0 flex justify-center items-center p-3 opacity-30 hover:opacity-100 cursor-pointer z-20`}
+                onClick={clickHandler}
+              >
+                <BsChevronCompactLeft className="w-9 h-9 text-white" />
               </div>
+              //   <BsChevronCompactLeft size={30} />
             );
           }}
           renderArrowNext={(clickHandler, hasNext) => {
             return (
-              <div className="arrow right-5 z-20" onClick={clickHandler}>
-                <BsChevronCompactRight size={30} />
+              <div
+                className={`${
+                  hasNext ? "absolute" : "hidden"
+                } top-0 bottom-0 right-0 flex justify-center items-center p-3 opacity-30 hover:opacity-100 cursor-pointer z-20`}
+                onClick={clickHandler}
+              >
+                <BsChevronCompactRight className="w-9 h-9 text-white" />
               </div>
+              //   <BsChevronCompactRight size={30} />
             );
           }}
         >
