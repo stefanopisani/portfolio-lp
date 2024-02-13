@@ -12,8 +12,8 @@ export default function Header() {
     ? "border-none"
     : "border-b-[1px] border-gray-100";
   const showRightLogoColor =
-    !menuActive && navigation ? "/LP_NERO.png" : "/LP_BIANCO.png";
-  const logo = menuActive ? "/LP_NERO.png" : showRightLogoColor;
+    !menuActive && navigation ? "/LPNERO.png" : "/LPBIANCO.png";
+  const logo = menuActive ? "/LPNERO.png" : showRightLogoColor;
 
   const handleLogoClick = () => {
     setMenuActive(false);
@@ -41,7 +41,7 @@ export default function Header() {
         </div>
         <div
           className={
-            "w-7 h-5 mt-2 flex flex-col justify-between cursor-pointer hover:animate-pulse " +
+            "w-7 h-5 mt-2 flex flex-col justify-between cursor-pointer " +
             (menuActive && "active")
           }
           onClick={() => setMenuActive(!menuActive)}

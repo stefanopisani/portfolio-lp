@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useContext, useEffect, useState } from "react";
 import AppContext from "@/context/AppContext";
 import useCheckMobile from "../../hooks/useCheckMobile";
+import Carousel from "@/components/Carousel";
 
 const shuffle = (array: string[]) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -49,7 +50,8 @@ export default function Home() {
       <Head>
         <title> LP Architecture</title>
       </Head>
-      {results && <Hero slides={results} />}
+      {/* {results && <Hero slides={results} />} */}
+      {results && <Carousel slides={results} />}
     </div>
   );
 }

@@ -4,7 +4,7 @@
 
 @layer components {
   .line {
-    @apply w-full h-[0.5px] bg-white transition transform duration-500;
+    @apply w-full h-[1px] bg-white transition transform duration-500;
   }
   .line-navigation {
     @apply bg-black transition transform duration-500;
