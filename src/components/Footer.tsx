@@ -42,8 +42,8 @@ export default function Footer() {
         </div>
 
         <div className="grid place-content-center hover:font-normal">
-          <a href="mailto:info@lpstudiodiarchitettura.com/">
-            info@lpstudiodiarchitettura.com/
+          <a href="mailto:info@lpstudiodiarchitettura.com">
+            info@lpstudiodiarchitettura.com
           </a>
         </div>
       </div>

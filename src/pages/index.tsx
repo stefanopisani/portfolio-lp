@@ -37,7 +37,7 @@ export default function Home() {
         };
       });
       console.log(images);
-      // shuffle(images);
+      shuffle(images);
       setResults(images);
     })();
   }, [isMobile]);
