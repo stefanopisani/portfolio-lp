@@ -25,7 +25,7 @@ export default function Header() {
     <>
       <header
         className={
-          "fixed w-full top-0 z-20 pb-2 lg:pb-4 p-6 flex justify-between mx-auto xl:items-center " +
+          "fixed w-full top-0 z-30 pb-2 lg:pb-4 p-6 flex justify-between mx-auto xl:items-center " +
           (navigation && "bg-white " + headerBorder)
         }
       >

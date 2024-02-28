@@ -15,7 +15,7 @@ function About({}: Props) {
   const { desktop, mobile } = studio.data;
   return (
     <>
-      <div className="grid place-items-center tracking-wide sm:tracking-wider text-base sm:text-lg font-thin text-justify leading-relaxed">
+      <div className="grid place-items-center tracking-wide sm:tracking-wider text-base sm:text-lg font-thin text-left leading-relaxed">
         <div className="mt-[150px] max-w-4xl px-3">
           <div className="grid place-items-center">
             <Image

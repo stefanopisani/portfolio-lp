@@ -50,29 +50,34 @@ function Hero({ slides }: Props) {
 
   return (
     <div className="h-screen m-auto relative group">
-      {shouldShowIntro && <Intro />}
-      {slides.map((slide: any, index: number) => (
-        <Image
-          key={slide.id}
-          alt={slide.title}
-          src={slide.image}
-          className={`w-full h-full bg-center bg-cover absolute top-0 ${zInd(
-            index
-          )}`}
-          height={0}
-          width={0}
-          loading="eager"
-          priority
-          unoptimized
-        />
-      ))}
-      <div className="arrow left-5 z-20">
-        <BsChevronCompactLeft onClick={prevSlide} size={30} />
-      </div>
+      {shouldShowIntro ? (
+        <Intro />
+      ) : (
+        <>
+          {slides.map((slide: any, index: number) => (
+            <Image
+              key={slide.id}
+              alt={slide.title}
+              src={slide.image}
+              className={`w-full h-full bg-center bg-cover absolute top-0 ${zInd(
+                index
+              )}`}
+              height={0}
+              width={0}
+              loading="eager"
+              priority
+              unoptimized
+            />
+          ))}
+          <div className="arrow left-5 z-20">
+            <BsChevronCompactLeft onClick={prevSlide} size={30} />
+          </div>
 
-      <div className="arrow right-5 z-20">
-        <BsChevronCompactRight onClick={nextSlide} size={30} />
-      </div>
+          <div className="arrow right-5 z-20">
+            <BsChevronCompactRight onClick={nextSlide} size={30} />
+          </div>
+        </>
+      )}
     </div>
   );
 }

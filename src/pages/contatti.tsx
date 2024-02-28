@@ -80,8 +80,8 @@ function About({}) {
         </p>
       </div>
 
-      <div className="sm:flex sm:items-center sm:justify-between sm:min-w-[600px]">
-        <div className="sm:mb-0 mb-[50px] grid grid-cols-2 mt-[50px]">
+      <div className=" ">
+        <div className="mb-[50px] grid grid-cols-2 mt-[50px]">
           <Image
             className=""
             src="/QR_CODE.png"
@@ -128,7 +128,7 @@ function About({}) {
             </div>
             <button
               type="submit"
-              className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+              className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 rounded shadow"
             >
               Send
             </button>

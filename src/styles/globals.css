@@ -10,13 +10,15 @@
     @apply bg-black transition transform duration-500;
   }
   .first-line-active {
-    @apply rotate-45 translate-y-[10px] sm:translate-y-[9px] bg-black;
+    @apply duration-500 rotate-45 origin-top-left bg-black;
+    /* translate-y-[10px] sm:translate-y-[9px] */
   }
   .second-line-active {
     @apply hidden;
   }
   .third-line-active {
-    @apply -rotate-45 -translate-y-[10px] sm:-translate-y-[9px] bg-black;
+    @apply duration-500 -rotate-45 origin-bottom-left  bg-black;
+    /* -translate-y-[10px] sm:-translate-y-[9px] */
   }
   .arrow {
     @apply hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%]  text-3xl text-white cursor-pointer duration-500;
@@ -25,6 +27,6 @@
     @apply text-2xl sm:text-3xl tracking-wider my-1 text-center cursor-pointer hover:font-medium;
   }
   .form {
-    @apply appearance-none text-base font-thin pb-2 my-2 leading-tight focus:outline-none w-full border-b-[1px] border-gray-700 placeholder-gray-700;
+    @apply appearance-none text-base font-thin pb-2 my-2 leading-tight focus:outline-none w-full border-b-0 sm:border-b-[0.5px] border-gray-700 placeholder-gray-700;
   }
 }

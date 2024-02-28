@@ -12,19 +12,6 @@ function Menu({}: Props) {
       <ul>
         <li className="menu">
           <Link
-            href={"/studio"}
-            onClick={() => {
-              setTimeout(() => {
-                setMenuActive(false);
-                setNavigation(true);
-              }, 500);
-            }}
-          >
-            Studio
-          </Link>
-        </li>
-        <li className="menu">
-          <Link
             href={"/projects"}
             onClick={() => {
               setTimeout(() => {
@@ -34,6 +21,19 @@ function Menu({}: Props) {
             }}
           >
             Progetti
+          </Link>
+        </li>
+        <li className="menu">
+          <Link
+            href={"/studio"}
+            onClick={() => {
+              setTimeout(() => {
+                setMenuActive(false);
+                setNavigation(true);
+              }, 500);
+            }}
+          >
+            Studio
           </Link>
         </li>
         <li className="menu">News</li>

@@ -36,7 +36,8 @@ export default function Home() {
           height: resource.height,
         };
       });
-      shuffle(images);
+      console.log(images);
+      // shuffle(images);
       setResults(images);
     })();
   }, [isMobile]);
