@@ -5,12 +5,10 @@ import AppContext from "@/context/AppContext";
 import useCheckMobile from "../../hooks/useCheckMobile";
 import Carousel from "@/components/Carousel";
 
-const shuffle = (array: string[]) => {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
+const orderImages = (images: any) => {
+  images.sort((a: any, b: any) => {
+    return a.title - b.title;
+  });
 };
 
 export default function Home() {
@@ -28,16 +26,19 @@ export default function Home() {
         }),
       }).then((r) => r.json());
       const images = results.resources.map((resource: any) => {
+        const title: string = resource.public_id;
+        const titleNumber =
+          queryParam === "mobile" ? title.substring(20) : title.substring(21);
+
         return {
           id: resource.asset_id,
-          title: resource.public_id,
+          title: +titleNumber,
           image: resource.secure_url,
           width: resource.width,
           height: resource.height,
         };
       });
-      console.log(images);
-      shuffle(images);
+      orderImages(images);
       setResults(images);
     })();
   }, [isMobile]);
