@@ -20,6 +20,14 @@ function ProjectPage() {
 
   return (
     <div className="grid place-items-center tracking-wide sm:tracking-wider mt-[90px]">
+      <div className="z-50 top-5 sticky">
+        <h2 className="text-md tracking-widest text-center uppercase">
+          {project?.name}
+        </h2>
+        <h2 className="text-sm tracking-wider font-extralight text-center uppercase mb-2">
+          {project?.description}
+        </h2>
+      </div>
       {project?.imgs.map((project) => (
         <>
           <div className="max-w-4xl px-3 mb-[30px]">
