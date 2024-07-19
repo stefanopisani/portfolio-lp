@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import { useRouter } from "next/router";
 import AppContext from "@/context/AppContext";
-import projects from "../../../public/archive/projects.json";
-import { motion } from "framer-motion";
+import projects from "../../../public/archive/galleria.json";
+import Image from "next/image";
 
 type Props = {};
 
@@ -10,25 +10,33 @@ function ProjectPage() {
   const { menuActive, setNavigation } = useContext(AppContext);
   const router = useRouter();
   const projectIndex = Number(router.query.id);
-  // const project = projects.data.find((slide) => slide.id === projectIndex);
+  const project = projects.data.find(
+    (project) => project.id === `${projectIndex}`
+  );
 
   useEffect(() => {
     setNavigation(true);
   }, []);
 
   return (
-    <div className="h-screen grid place-items-center">
-      <motion.h1
-        initial={{ y: -50 }}
-        animate={{ y: 0 }}
-        transition={{
-          ease: "linear",
-          duration: 1,
-        }}
-        viewport={{ once: true }}
-      >
-        Pagina in manutenzione
-      </motion.h1>
+    <div className="grid place-items-center tracking-wide sm:tracking-wider mt-[90px]">
+      {project?.imgs.map((project) => (
+        <>
+          <div className="max-w-4xl px-3 mb-[30px]">
+            <Image
+              src={`${project.image}`}
+              alt="A London skyscraper"
+              className="h-auto w-auto rounded-sm grid-cols-4"
+              loading="eager"
+              width={0}
+              height={0}
+              priority
+              unoptimized
+              onLoad={() => console.log("image loaded")}
+            />
+          </div>
+        </>
+      ))}
     </div>
   );
 }

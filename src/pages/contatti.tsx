@@ -94,7 +94,9 @@ function About({}) {
             <h2 className="text-sm font-thin mb-2">Via Belsito 17</h2>
             <h2 className="text-sm font-thin mb-2">80123 Napoli - Italia</h2>
             <h2 className="text-sm font-thin mb-2">3397468046</h2>
-            <h2 className="text-sm font-thin mb-2">info@lpstudio.com</h2>
+            <h2 className="text-sm font-thin mb-2">
+              info@lpstudiodiarchitettura.com
+            </h2>
           </div>
         </div>
 

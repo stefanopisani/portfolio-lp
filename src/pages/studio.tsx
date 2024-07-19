@@ -69,11 +69,11 @@ function About({}: Props) {
             <p className="sm:col-span-2">
               Un settore di progettazione importante per lo studio è legato
               all’ambito residenziale. In questi interventi il tema centrale è
-              la rigenerazione urbana attraverso la ricostruzione o il retrofi
-              tting del patrimonio immobiliare esistente.
+              la rigenerazione urbana attraverso la ricostruzione o il
+              retrofitting del patrimonio immobiliare esistente.
               <br />
               <p className="sm:pt-[25px]">
-                L’ obiettivo che si pone è progettare edifi ci che riescano a
+                L’ obiettivo che si pone è progettare edifici che riescano a
                 dare un contributo positivo sia al processo di trasformazione
                 urbana e sociale che al tema della sostenibilità ambientale
               </p>
@@ -103,7 +103,7 @@ function About({}: Props) {
             Lo studio è appassionato dalle soluzioni tipologiche miste
             commerciale-direzionale. L’attenzione progettuale si concentra
             sull’importanza della qualità degli ambienti di lavoro, della luce e
-            dell’atmosfera, dei materiali e delle fi niture, con la
+            dell’atmosfera, dei materiali e delle finiture, con la
             consapevolezza che in un luogo che ci fa sentire a nostro agio
             riusciamo a lavorare meglio.
           </p>
@@ -209,11 +209,11 @@ function About({}: Props) {
               studio Smithbarracco per la stazione della metropolitana di
               Capodichino di Napoli. Affascinato dal mondo delle costruzioni,
               istaura un’assidua collaborazione con il costruttore Giuseppe Iesu
-              che gli affi da il ruolo di Lead Architect per la sua società
+              che gli affida il ruolo di Lead Architect per la sua società
               immobiliare: Iesu S.p.a. In questi anni segue una serie di opere
               private per imprenditori immobiliari: fabbricati residenziali,
               commerciali e industriali, supportando l’investimento immobiliare
-              dallo studio di fattibilità fi no alla fase di progettazione
+              dallo studio di fattibilità fino alla fase di progettazione
               esecutiva. Parallelamente ha avuto il piacere di progettare ville
               private, ristrutturazione di appartamenti residenziali ed esercizi
               commerciali.
