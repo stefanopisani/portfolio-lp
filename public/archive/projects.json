@@ -1,6 +1,12 @@
 {
   "data": [
     {
+      "id": "0",
+      "name": "Villa Rinaldi",
+      "info": "Private villa",
+      "image": "https://res.cloudinary.com/duephguxa/image/upload/v1722607996/Portfolio-lp/progetti/ygtcltkwvhydluwznl62.jpg"
+    },
+    {
       "id": "1",
       "name": "Tescione 20",
       "info": "Residential building",
@@ -33,7 +39,7 @@
     {
       "id": "6",
       "name": "Bellevue",
-      "info": "residential complex",
+      "info": "Residential complex",
       "image": "https://res.cloudinary.com/duephguxa/image/upload/v1709137751/Portfolio-lp/progetti/vrl3mpzsoolzx0soewir.jpg"
     },
     {
@@ -51,7 +57,7 @@
     {
       "id": "9",
       "name": "Pool area villa I",
-      "info": "outdoor",
+      "info": "Outdoor",
       "image": "https://res.cloudinary.com/duephguxa/image/upload/v1709137750/Portfolio-lp/progetti/ww2juupupvqgesaconqa.jpg"
     },
     {
@@ -81,13 +87,13 @@
     {
       "id": "14",
       "name": "Montenero",
-      "info": "residential",
+      "info": "Residential",
       "image": "https://res.cloudinary.com/duephguxa/image/upload/v1709137752/Portfolio-lp/progetti/eotbgip7o0cgvfvifogg.jpg"
     },
     {
       "id": "15",
       "name": "lala noodles",
-      "info": "asian food",
+      "info": "Asian food",
       "image": "https://res.cloudinary.com/duephguxa/image/upload/v1709137752/Portfolio-lp/progetti/vzw1llplxphbtvfaqmwk.jpg"
     },
     {

@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import AppContext from "@/context/AppContext";
 import projects from "../../../public/archive/galleria.json";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -19,33 +20,51 @@ function ProjectPage() {
   }, []);
 
   return (
-    <div className="grid place-items-center tracking-wide sm:tracking-wider mt-[90px]">
-      <div className="z-50 top-5 sticky">
-        <h2 className="text-md tracking-widest text-center uppercase">
-          {project?.name}
-        </h2>
-        <h2 className="text-sm tracking-wider font-extralight text-center uppercase mb-2">
-          {project?.description}
-        </h2>
-      </div>
-      {project?.imgs.map((project) => (
-        <>
-          <div className="max-w-4xl px-3 mb-[30px]">
-            <Image
-              src={`${project.image}`}
-              alt="A London skyscraper"
-              className="h-auto w-auto rounded-sm grid-cols-4"
-              loading="eager"
-              width={0}
-              height={0}
-              priority
-              unoptimized
-              onLoad={() => console.log("image loaded")}
-            />
+    <>
+      {project ? (
+        <div className="grid place-items-center tracking-wide sm:tracking-wider mt-[90px]">
+          <div className="z-50 top-5 sticky">
+            <h2 className="text-md tracking-widest text-center uppercase">
+              {project?.name}
+            </h2>
+            <h2 className="text-sm tracking-wider font-extralight text-center uppercase mb-2">
+              {project?.description}
+            </h2>
           </div>
-        </>
-      ))}
-    </div>
+          {project?.imgs.map((project) => (
+            <>
+              <div className="max-w-4xl px-3 mb-[30px]">
+                <Image
+                  src={`${project.image}`}
+                  alt="A London skyscraper"
+                  className="h-auto w-auto rounded-sm grid-cols-4"
+                  loading="eager"
+                  width={0}
+                  height={0}
+                  priority
+                  unoptimized
+                  onLoad={() => console.log("image loaded")}
+                />
+              </div>
+            </>
+          ))}
+        </div>
+      ) : (
+        <div className="h-screen grid place-items-center">
+          <motion.h1
+            initial={{ y: -50 }}
+            animate={{ y: 0 }}
+            transition={{
+              ease: "linear",
+              duration: 1,
+            }}
+            viewport={{ once: true }}
+          >
+            Pagina in manutenzione
+          </motion.h1>
+        </div>
+      )}
+    </>
   );
 }
 
