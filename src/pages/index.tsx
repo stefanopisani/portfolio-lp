@@ -55,6 +55,10 @@ export default function Home() {
           name="description"
           content="LP è uno studio di progettazione architettonica con sede a Napoli. Fondato nel 2022 da Luca Pisani, si occupa di progettazione architettonica e urbana, interior e product design."
         />
+        <meta
+          name="google-site-verification"
+          content="PdEBgVds2V1RvzVz42aypVn1cwV9GVPbMpfBn8JXdBw"
+        />
       </Head>
       {/* {results && <Hero slides={results} />} */}
       {results && <Carousel slides={results} />}
