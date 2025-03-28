@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title> LP Studio di Architetture</title>
+        <title> LP Studio di Architettura</title>
         <meta
           name="description"
           content="LP è uno studio di progettazione architettonica con sede a Napoli. Fondato nel 2022 da Luca Pisani, si occupa di progettazione architettonica e urbana, interior e product design."
